@@ -9,6 +9,9 @@ tasks:
   - init: >
       pip install -r requirements.txt &&
       pip install --upgrade pip &&
+      sudo apt-get update && 
+      sudo apt-get install mariadb-server -y && 
+      sudo /etc/init.d/mysql start &&
       gp sync-done bundle
   - command: >
       gp sync-await bundle && flask run
