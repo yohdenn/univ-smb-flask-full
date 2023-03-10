@@ -2,8 +2,9 @@ image: gitpod/workspace-python
 
 ports:
   - port: 5000
-    onOpen: open-preview
-    description: University of Savoy - Flask Sample app
+    description: USMB - Website
+  - port: 5001
+    description: USMB - API
 
 tasks:
   - init: >
@@ -11,10 +12,7 @@ tasks:
       pip install --upgrade pip &&
       sudo apt-get update && 
       sudo apt-get install mariadb-server -y && 
-      sudo /etc/init.d/mysql start &&
-      gp sync-done bundle
-  - command: >
-      gp sync-await bundle && flask run
+      sudo /etc/init.d/mysql start
 
 vscode:
   extensions:
