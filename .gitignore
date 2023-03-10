@@ -1,3 +1,7 @@
 _pycache_/
 src/flask-api/_pycache_/
 src/flask-website/_pycache_/
+
+_pycache_/*
+src/flask-api/_pycache_/*
+src/flask-website/_pycache_/*
